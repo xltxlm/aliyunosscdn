@@ -1,0 +1,7 @@
+.idea
+temp
+php_errors.log
+*.lock
+*.flock
+vendor
+tests
