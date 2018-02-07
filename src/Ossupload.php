@@ -227,12 +227,13 @@ class Ossupload
     public function __invoke()
     {
         //第一部分：上传文件
-        $ossClient = new OssClient('LTAI9IblEPRva27b', 'NzIf4mWpKtNBq2IWJK2JNKtFeYrTx4', 'http://oss-cn-beijing.aliyuncs.com', false);
+        $ossClient = new OssClient($this->getOssaccessKeyId(), $this->getOssaccessKeySecret(), $this->getOssendpoint(), false);
         $ossClient->uploadFile($this->getBucket(), $this->getCdnOrOsspath(), $this->getLocalfilepath());
         $picurl = "{$this->getCdndomain()}{$this->getCdnOrOsspath()}";
 
         //第二部分：刷新cdn
-        if ($this->getCdnregionId()) {
+        if ($this->getCdnregionId()hpnginx /root/gitpush.sh
+    ) {
             //上传完毕之后，刷新cdn
             require __DIR__ . '/../aliyun-openapi-php-sdk/aliyun-php-sdk-core/Config.php';
 
