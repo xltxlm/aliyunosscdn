@@ -232,8 +232,7 @@ class Ossupload
         $picurl = "{$this->getCdndomain()}{$this->getCdnOrOsspath()}";
 
         //第二部分：刷新cdn
-        if ($this->getCdnregionId()hpnginx /root/gitpush.sh
-    ) {
+        if ($this->getCdnregionId()) {
             //上传完毕之后，刷新cdn
             require __DIR__ . '/../aliyun-openapi-php-sdk/aliyun-php-sdk-core/Config.php';
 
