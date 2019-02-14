@@ -228,7 +228,7 @@ class Ossupload
     {
         //第一部分：上传文件
         $ossClient = new OssClient($this->getOssaccessKeyId(), $this->getOssaccessKeySecret(), $this->getOssendpoint(), false);
-        $ossClient->uploadFile($this->getBucket(), $this->getCdnOrOsspath(), $this->getLocalfilepath());
+        $ossClient->uploadFile($this->getBucket(), $this->getCdnOrOsspath(), $this->getLocalfilepath(), [OssClient::OSS_CHECK_MD5 => true]);
         $picurl = "{$this->getCdndomain()}{$this->getCdnOrOsspath()}";
 
         //第二部分：刷新cdn

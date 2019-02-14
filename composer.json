@@ -1,25 +1,24 @@
 {
   "name": "xltxlm/aliyunosscdn",
-  "description": "操作阿里云的oss，cdn接口代码",
-  "minimum-stability": "stable",
-  "license": "proprietary",
   "authors": [
     {
-      "name": "xltxlm",
+      "name": "copygithub",
       "email": "xltxlm@qq.com"
     }
   ],
+  "minimum-stability": "dev",
+  "description":"阿里云oss和cdn的操作方法.",
   "require": {
-    "php": ">=7.0",
-    "aliyuncs/oss-sdk-php": "~2.0"
+    "php": ">=7.1",
+    "aws/aws-sdk-php": "3.*",
+    "aliyuncs/oss-sdk-php": "~2.0",
+    "xltxlm/exception": "@dev"
   },
   "autoload": {
     "psr-4": {
       "xltxlm\\aliyunosscdn\\": [
-        "src/"
-      ],
-      "Cdn\\": [
-        "./aliyun-openapi-php-sdk/aliyun-php-sdk-cdn/Cdn/"
+        "src/",
+        "./"
       ]
     }
   }
