@@ -197,4 +197,36 @@ Trait __to_implements
 
 
 
+/* @var \OSS\OssClient  获取Oss的链接客户端,然后可以调取其他sdk接口 */
+    protected $client;
+
+
+
+
+
+    /**
+    * @return \OSS\OssClient;
+    */
+            public function getclient():\OSS\OssClient        {
+                return $this->client;
+        }
+
+    
+    
+
+
+
+
+/**
+* @param \OSS\OssClient $client;
+* @return $this
+*/
+    public function setclient(\OSS\OssClient $client )
+    {
+    $this->client = $client;
+    return $this;
+    }
+
+
+
 }

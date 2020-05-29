@@ -21,6 +21,7 @@ Trait __to
     }
 
 
+
     protected function Real_getAWSclient(): \Aws\S3\S3Client
     {
         //Only pulled if an AWS class doesn't already exist.

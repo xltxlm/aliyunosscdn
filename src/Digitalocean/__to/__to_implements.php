@@ -17,6 +17,7 @@ Trait __to_implements
 
 
     /**
+    * ;
     * @return string;
     */
             public function getaccess_key():string        {
@@ -49,6 +50,7 @@ Trait __to_implements
 
 
     /**
+    * ;
     * @return string;
     */
             public function getsecret_key():string        {
@@ -81,6 +83,7 @@ Trait __to_implements
 
 
     /**
+    * ;
     * @return string;
     */
             public function getspaceName():string        {
@@ -113,6 +116,7 @@ Trait __to_implements
 
 
     /**
+    * ;
     * @return string;
     */
             public function getregion():string        {
@@ -145,6 +149,7 @@ Trait __to_implements
 
 
     /**
+    * ;
     * @return string;
     */
             public function gethost():string        {
@@ -170,18 +175,20 @@ Trait __to_implements
 
 
 /* @var \Aws\S3\S3Client  生成的句柄 */
-    protected $AWSclient;
+        protected $AWSclient;
 
 
 
 
     protected $cached_AWSclient = false;
     /**
+    * 生成的句柄;
     * @return \Aws\S3\S3Client;
     */
     abstract protected function Real_getAWSclient():\Aws\S3\S3Client;
 
     /**
+    * 生成的句柄;
     * @return \Aws\S3\S3Client;
     */
     public final function getAWSclient(bool $清除缓存 = false ):\Aws\S3\S3Client    {
@@ -202,7 +209,7 @@ Trait __to_implements
 */
     public function setAWSclient(\Aws\S3\S3Client $AWSclient )
     {
-    $this->AWSclient = $AWSclient;
+    $this->cached_AWSclient = $AWSclient;
     return $this;
     }
 
@@ -216,6 +223,7 @@ Trait __to_implements
 
 
     /**
+    * 远程路径,设置的时候,去掉第一个/;
     * @return string;
     */
             public function getremote_path():string        {
@@ -244,6 +252,7 @@ Trait __to_implements
 
 
     /**
+    * 本地文件的路径;
     * @return string;
     */
             public function getlocal_path():string        {

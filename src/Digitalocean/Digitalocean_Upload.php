@@ -24,7 +24,7 @@ class Digitalocean_Upload extends Digitalocean_Upload\Digitalocean_Upload_implem
         try {
             $result = $client->putObject($args);
         } catch (\Exception $e) {
-            p([$this->getremote_path(), $this->getremote_path(), $args]);
+            p([$this->getremote_path(), $this->getremote_path(), $args,$e->getMessage()]);
             throw $e;
         }
         $client->waitUntil('ObjectExists', array(
